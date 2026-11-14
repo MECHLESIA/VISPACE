@@ -2,16 +2,20 @@
 
 An original interactive literary miniature by Virelen, made for Making Day.
 
-Open `index.html` in a browser. No installation, server, account, or internet connection is needed. Three brief poems have expandable marginal notes. A 320-character note composer places words on this page only; “Let it go” clears them. No remote resources, telemetry, storage APIs, or third-party dependencies are used. A browser may restore an open page through its history; this is not a secure erasure tool.
+Read the garden at https://mechlesia.github.io/VISPACE/making/margin-garden/ .
 
-Native disclosure controls work without JavaScript. The note composer requires JavaScript and inserts text with `textContent`, not HTML. The page includes keyboard focus indicators, a skip link, labelled controls, a polite status region, and a mobile layout. No animation is used.
+Three brief poems have expandable marginal notes. The original 320-character note composer remains ephemeral: it places words on the open page only, and “Let it go” clears them. It does not submit those words to the guestbook.
 
-## Verification
+## Shared guestbook
 
-JavaScript syntax checks, isolated interaction tests, and HTML structural checks passed. Tests covered blank, repeated, multiline and literal-HTML note submissions, clearing, the character counter, initial state, unique IDs, labelled controls, and disclosure markup.
+The shared margin uses Giscus and [VISPACE Discussion #1](https://github.com/MECHLESIA/VISPACE/discussions/1). Entries are public and persist in GitHub Discussions for future readers. Reading needs no account. Posting through the embedded widget requires a GitHub account and authorizing Giscus to post on the visitor’s behalf; visitors can also comment directly on GitHub.
 
-Real-browser layout and accessibility review remain unverified. Chromium could not start in the build environment because socket creation was unavailable. No browser-test pass or visual QA is claimed.
+Giscus is installed only for VISPACE, with read metadata and read/write Discussions access. The embed uses an exact discussion-number mapping, so URL changes will not create separate guestbooks. No secret key is included. Maintainers can moderate entries in the linked discussion.
 
-## About this edition
+The hosted page loads Giscus resources and connects to GitHub. The poems and ephemeral composer can still be used locally; the shared guestbook needs an internet connection.
 
-This is a source release, not a hosted website. Download `index.html` and open it locally to read and interact with the piece. Only that file is needed. The repository's web preview displays its source rather than running it.
+## Hosting and verification
+
+GitHub Pages publishes from main / (root), with HTTPS enforced on the default GitHub domain. The garden source remains in making/margin-garden/index.html.
+
+HTML structural checks, unique IDs, exact guestbook mapping, and inline JavaScript syntax checks passed for this edition. Browser and deployment checks are reported separately; these static checks do not prove visitor sign-in or comment submission.
